@@ -1,4 +1,4 @@
-import { FoxMark } from "@/components/fox-mark";
+import { FoxLockup } from "@/components/fox-mark";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Key, Lock, Upload } from "lucide-react";
 
@@ -30,9 +30,7 @@ export default function Home() {
 
       <header className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
         <a href="/" className="flex items-center gap-2.5 text-foreground">
-          <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-white shadow-[0_8px_24px_rgba(194,65,12,0.28)]">
-            <FoxMark className="h-[22px] w-[22px]" />
-          </span>
+          <FoxLockup />
           <span className="text-[15px] font-semibold tracking-tight">faxen</span>
         </a>
         <ThemeToggle />
