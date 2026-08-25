@@ -1,4 +1,4 @@
-# Faxen
+# faxen
 
 A secure upload portal for all your needs.
 
