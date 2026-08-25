@@ -1,0 +1,65 @@
+#======================================================================
+# macOS / System Files
+#======================================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+#======================================================================
+# Xcode Build Artifacts & Internals
+#======================================================================
+build/
+DerivedData/
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+#======================================================================
+# User-Specific Settings (Keep schemes shared, ignore personal layout)
+#======================================================================
+userdata/
+xcuserdata/
+############
+# Crucial: DO NOT ignore xcshareddata as it breaks shared schemes
+############
+!xcshareddata/
+
+#======================================================================
+# Swift Package Manager (SPM)
+#======================================================================
+.swiftpm/
+.build/
+# Uncomment the line below ONLY if you want to cache dependency source code locally
+# Packages/
+
+# Crucial: Keep Package.resolved committed so your team uses identical dependency versions
+!Package.resolved
+
+#======================================================================
+# Third-Party Dependency Managers (Optional)
+#======================================================================
+# CocoaPods (Uncomment if you use Pods and prefer not to commit the source code)
+# Pods/
+
+# Carthage (Uncomment if you use Carthage)
+# Carthage/
+# Carthage/Build
+
+#======================================================================
+# Automation & Security
+#======================================================================
+# Fastlane artifacts
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/
+fastlane/test_output/
+
+# Sensitive data
+.env
+.env.*
+*.xcconfig
+
