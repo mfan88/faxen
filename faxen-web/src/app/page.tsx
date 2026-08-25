@@ -23,11 +23,6 @@ const features = [
 export default function Home() {
   return (
     <div className="relative flex min-h-full flex-1 flex-col">
-      <div className="ambient" aria-hidden>
-        <span className="ambient-orb ambient-orb-left" />
-        <span className="ambient-orb ambient-orb-mid" />
-      </div>
-
       <header className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
         <a href="/" className="flex items-center gap-2.5 text-foreground">
           <FoxLockup />
@@ -67,10 +62,7 @@ export default function Home() {
           </a>
         </div>
 
-        <section
-          id="how"
-          className="mt-20 grid w-full gap-4 sm:grid-cols-3"
-        >
+        <section id="how" className="mt-20 grid w-full gap-4 sm:grid-cols-3">
           {features.map((feature) => (
             <article
               key={feature.title}

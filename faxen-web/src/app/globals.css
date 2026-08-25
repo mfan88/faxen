@@ -40,137 +40,26 @@ body {
 }
 
 body {
-  background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  background-color: #f6f3ee;
+  background-image:
+    radial-gradient(ellipse 80% 55% at 50% -10%, #ffffff 0%, rgba(255, 248, 241, 0.9) 32%, transparent 68%),
+    radial-gradient(ellipse 45% 40% at 92% 12%, rgba(255, 237, 213, 0.72) 0%, transparent 72%),
+    radial-gradient(ellipse 50% 40% at 6% 96%, rgba(255, 250, 244, 0.9) 0%, rgba(254, 243, 226, 0.4) 42%, transparent 72%),
+    radial-gradient(ellipse 28% 22% at 50% 48%, rgba(255, 255, 255, 0.85) 0%, transparent 72%);
+}
+
+.dark body {
+  background-color: #161311;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -8%, rgba(194, 65, 12, 0.42) 0%, rgba(154, 52, 18, 0.2) 36%, transparent 70%),
+    radial-gradient(ellipse 42% 38% at 94% 10%, rgba(127, 29, 29, 0.38) 0%, rgba(68, 64, 60, 0.18) 50%, transparent 72%),
+    radial-gradient(ellipse 48% 38% at 4% 96%, rgba(87, 83, 78, 0.5) 0%, rgba(41, 37, 36, 0.32) 48%, transparent 72%),
+    radial-gradient(ellipse 32% 26% at 50% 52%, rgba(234, 88, 12, 0.16) 0%, transparent 72%);
 }
 
 ::selection {
   background: color-mix(in srgb, var(--accent) 28%, transparent);
   color: var(--foreground);
-}
-
-.ambient {
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-  pointer-events: none;
-  background-color: #f6f3ee;
-}
-
-.dark .ambient {
-  background-color: #161311;
-}
-
-.ambient::before,
-.ambient::after {
-  content: "";
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(80px);
-  will-change: transform;
-}
-
-/* Light: luminous off-white bloom */
-.ambient::before {
-  top: -18%;
-  left: 50%;
-  width: 78vw;
-  height: 58vw;
-  max-width: 920px;
-  max-height: 720px;
-  translate: -50% 0;
-  background: radial-gradient(
-    circle,
-    #ffffff 0%,
-    #fff8f1 38%,
-    rgba(255, 236, 214, 0.55) 62%,
-    transparent 74%
-  );
-  opacity: 0.95;
-}
-
-.ambient::after {
-  right: -8%;
-  top: 12%;
-  width: 42vw;
-  height: 42vw;
-  max-width: 480px;
-  max-height: 480px;
-  background: radial-gradient(circle, rgba(255, 237, 213, 0.7) 0%, transparent 70%);
-  opacity: 0.85;
-}
-
-.ambient-orb {
-  position: absolute;
-  border-radius: 9999px;
-  filter: blur(72px);
-}
-
-.ambient-orb-left {
-  left: -6%;
-  bottom: -8%;
-  width: 46vw;
-  height: 36vw;
-  max-width: 520px;
-  max-height: 420px;
-  background: radial-gradient(circle, rgba(255, 250, 244, 0.95) 0%, rgba(254, 243, 226, 0.45) 45%, transparent 70%);
-}
-
-.ambient-orb-mid {
-  left: 50%;
-  top: 42%;
-  width: 28vw;
-  height: 22vw;
-  max-width: 360px;
-  max-height: 280px;
-  translate: -50% 0;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.9) 0%, transparent 72%);
-}
-
-/* Dark: red fox + cool gray */
-.dark .ambient::before {
-  background: radial-gradient(
-    circle,
-    rgba(194, 65, 12, 0.42) 0%,
-    rgba(154, 52, 18, 0.22) 38%,
-    rgba(41, 37, 36, 0.15) 62%,
-    transparent 74%
-  );
-  opacity: 1;
-  filter: blur(64px);
-}
-
-.dark .ambient::after {
-  background: radial-gradient(circle, rgba(127, 29, 29, 0.38) 0%, rgba(68, 64, 60, 0.2) 50%, transparent 72%);
-  opacity: 1;
-}
-
-.dark .ambient-orb-left {
-  background: radial-gradient(circle, rgba(87, 83, 78, 0.55) 0%, rgba(41, 37, 36, 0.35) 48%, transparent 72%);
-}
-
-.dark .ambient-orb-mid {
-  background: radial-gradient(circle, rgba(234, 88, 12, 0.18) 0%, transparent 70%);
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .ambient::before {
-    animation: glow-drift 18s ease-in-out infinite;
-  }
-
-  .ambient::after {
-    animation: glow-drift 22s ease-in-out infinite reverse;
-  }
-}
-
-@keyframes glow-drift {
-  0%,
-  100% {
-    transform: translate3d(0, 0, 0) scale(1);
-  }
-  50% {
-    transform: translate3d(2%, 3%, 0) scale(1.06);
-  }
 }

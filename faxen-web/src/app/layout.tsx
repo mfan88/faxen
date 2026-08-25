@@ -19,7 +19,7 @@ const instrumentSerif = Instrument_Serif({
   style: ["normal", "italic"],
 });
 
-const themeScript = `(function(){try{var s=localStorage.getItem("theme");var d=s==="dark"||(s!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);}catch(e){}})();`;
+const themeScript = `(function(){try{var s=localStorage.getItem("theme");var d=s==="dark"||(s!=="light"&&window.matchMedia("(prefers-color-scheme: dark)").matches);document.documentElement.classList.toggle("dark",d);}catch(e){}var last=0;function toggle(e){var t=e.target&&e.target.closest?e.target.closest("[data-theme-toggle]"):null;if(!t)return;e.preventDefault();e.stopPropagation();var now=Date.now();if(now-last<400)return;last=now;var isDark=document.documentElement.classList.toggle("dark");try{localStorage.setItem("theme",isDark?"dark":"light");}catch(err){}}document.addEventListener("click",toggle,true);document.addEventListener("touchstart",toggle,{capture:true,passive:false});})();`;
 
 export const metadata: Metadata = {
   title: "faxen — files made easy",
