@@ -24,25 +24,14 @@ This repository is the **web client**. More operator clients are planned so the 
 | Linux | Planned |
 | iOS | Planned |
 
+## Preview
+View the landing page in action [here](https://faxen.fenna.tech)
+
 ## This repository
 
 `faxen-web` is the browser client: the public landing surface and, next, the in-browser portal.
 
 Stack: Next.js, React, Tailwind CSS, TypeScript. Package manager: [Bun](https://bun.sh).
-
-## Getting started
-
-```bash
-bun install
-bun dev
-```
-
-Then open [http://localhost:3000](http://localhost:3000).
-
-```bash
-bun run build
-bun start
-```
 
 ## License
 
