@@ -6,6 +6,11 @@
 	objectVersion = 110;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		2AACFBFC303EACB100477DE8 /* ClerkKit in Frameworks */ = {isa = PBXBuildFile; productRef = 2AACFBFB303EACB100477DE8 /* ClerkKit */; };
+		2AACFBFE303EACB100477DE8 /* ClerkKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2AACFBFD303EACB100477DE8 /* ClerkKitUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		2AACFBB7303DB3CD00477DE8 /* faxen-ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "faxen-ios.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -22,6 +27,8 @@
 		2AACFBB4303DB3CD00477DE8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			files = (
+				2AACFBFC303EACB100477DE8 /* ClerkKit in Frameworks */,
+				2AACFBFE303EACB100477DE8 /* ClerkKitUI in Frameworks */,
 			);
 		};
 /* End PBXFrameworksBuildPhase section */
@@ -60,6 +67,10 @@
 				2AACFBB9303DB3CD00477DE8 /* faxen-ios */,
 			);
 			name = "faxen-ios";
+			packageProductDependencies = (
+				2AACFBFB303EACB100477DE8 /* ClerkKit */,
+				2AACFBFD303EACB100477DE8 /* ClerkKitUI */,
+			);
 			productName = faxen;
 			productReference = 2AACFBB7303DB3CD00477DE8 /* faxen-ios.app */;
 			productType = "com.apple.product-type.application";
@@ -88,6 +99,9 @@
 			);
 			mainGroup = 2AACFBAE303DB3CD00477DE8;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				2AACFBFA303EACB100477DE8 /* XCRemoteSwiftPackageReference "clerk-ios" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 2AACFBB8303DB3CD00477DE8 /* Products */;
 			projectDirPath = "";
@@ -241,6 +255,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "faxen-ios/faxen-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6VDNMF2TC;
@@ -275,6 +290,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "faxen-ios/faxen-ios.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = Q6VDNMF2TC;
@@ -324,6 +340,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		2AACFBFA303EACB100477DE8 /* XCRemoteSwiftPackageReference "clerk-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/clerk/clerk-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		2AACFBFB303EACB100477DE8 /* ClerkKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AACFBFA303EACB100477DE8 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = ClerkKit;
+		};
+		2AACFBFD303EACB100477DE8 /* ClerkKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2AACFBFA303EACB100477DE8 /* XCRemoteSwiftPackageReference "clerk-ios" */;
+			productName = ClerkKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2AACFBAF303DB3CD00477DE8 /* Project object */;
 	validationLevel = 1;
