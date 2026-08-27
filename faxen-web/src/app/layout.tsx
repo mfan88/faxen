@@ -46,7 +46,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
       </head>
-      <body className="min-h-full flex flex-col">
+      <body className="flex min-h-dvh min-w-0 flex-col overflow-x-hidden">
         <AppClerkProvider>
           <SettingsProvider>
             <ThemeProvider>

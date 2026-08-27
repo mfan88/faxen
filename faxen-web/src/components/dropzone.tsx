@@ -35,7 +35,7 @@ export default function FileUploadBox({
         ...props,
         className: cn(
           className,
-          "rounded-2xl border border-border bg-card p-5 backdrop-blur-md outline-none transition-colors",
+          "w-full min-w-0 rounded-2xl border border-border bg-card p-4 backdrop-blur-md outline-none transition-colors sm:p-5",
           "focus-visible:border-ring focus-visible:ring-[3px] focus-visible:ring-ring/50",
           isDragActive && "border-foreground/40 bg-card",
         ),
@@ -48,7 +48,7 @@ export default function FileUploadBox({
       <div className="mt-4">
         <div
           className={cn(
-            "rounded-xl border border-dashed border-border px-4 py-10 text-center",
+            "rounded-xl border border-dashed border-border px-3 py-8 text-center sm:px-4 sm:py-10",
             isDragActive && "border-foreground/50",
           )}
         >
@@ -58,7 +58,7 @@ export default function FileUploadBox({
               : "drop files here, or click to browse"}
           </p>
           {extensions ? (
-            <p className="mt-2 text-xs text-muted-foreground">{extensions}</p>
+            <p className="mt-2 break-words text-xs text-muted-foreground">{extensions}</p>
           ) : null}
         </div>
         {acceptedFiles.length > 0 ? (

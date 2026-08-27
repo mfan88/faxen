@@ -1,20 +1,15 @@
-import { FoxLockup } from "@/components/fox-mark";
-import { ThemeToggle } from "@/components/theme-toggle";
+import { SiteHeader } from "@/components/site-header";
 
 export default function AuthLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <div className="relative flex min-h-full flex-1 flex-col">
-      <header className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
-        <a href="/" className="flex items-center gap-2.5 text-foreground">
-          <FoxLockup />
-          <span className="text-[15px] font-semibold tracking-tight">faxen</span>
-        </a>
-        <ThemeToggle />
-      </header>
-      <main className="flex flex-1 items-center justify-center px-4 pb-16">
-        {children}
+    <div className="relative flex min-h-dvh flex-1 flex-col overflow-x-hidden">
+      <SiteHeader />
+      <main className="flex w-full min-w-0 flex-1 items-start justify-center px-4 py-6 sm:items-center sm:px-6 sm:pb-16">
+        <div className="flex w-full max-w-[min(100%,28rem)] justify-center overflow-x-auto">
+          {children}
+        </div>
       </main>
     </div>
   );

@@ -23,14 +23,17 @@ export function Links({
   }
 
   return (
-    <div className="flex flex-col gap-4">
-      <Button variant="secondary" onClick={handleClick}>
+    <div className="flex w-full min-w-0 flex-col gap-4">
+      <Button variant="secondary" className="w-full sm:w-auto" onClick={handleClick}>
         Create Link
       </Button>
       {links.length > 0 ? (
         <ul className="flex flex-col gap-2 text-sm text-muted-foreground">
           {links.map((link) => (
-            <li key={`${link.createdAt}-${link.message}`}>
+            <li
+              key={`${link.createdAt}-${link.message}`}
+              className="break-words"
+            >
               expires {new Date(link.expiresAt).toLocaleDateString()}
             </li>
           ))}
