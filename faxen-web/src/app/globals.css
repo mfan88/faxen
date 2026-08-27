@@ -131,6 +131,7 @@ body {
 body {
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
   background-color: #f6f3ee;
+  background-attachment: fixed;
   background-image:
     radial-gradient(ellipse 80% 55% at 50% -10%, #ffffff 0%, rgba(255, 248, 241, 0.9) 32%, transparent 68%),
     radial-gradient(ellipse 45% 40% at 92% 12%, rgba(255, 237, 213, 0.72) 0%, transparent 72%),
@@ -140,6 +141,7 @@ body {
 
 .dark body {
   background-color: #161311;
+  background-attachment: fixed;
   background-image:
     radial-gradient(ellipse 80% 50% at 50% -8%, rgba(194, 65, 12, 0.42) 0%, rgba(154, 52, 18, 0.2) 36%, transparent 70%),
     radial-gradient(ellipse 42% 38% at 94% 10%, rgba(127, 29, 29, 0.38) 0%, rgba(68, 64, 60, 0.18) 50%, transparent 72%),
