@@ -1,3 +1,5 @@
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 import { FoxLockup } from "@/components/fox-mark";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Key, Lock, Upload } from "lucide-react";
@@ -20,7 +22,13 @@ const features = [
   },
 ];
 
-export default function Home() {
+export default async function Home() {
+  const { userId, getToken } = await auth();
+  const token = userId ? await getToken() : null;
+  if (userId && token) {
+    redirect("/dashboard");
+  }
+
   return (
     <div className="relative flex min-h-full flex-1 flex-col">
       <header className="flex items-center justify-between px-5 py-5 sm:px-8 sm:py-6 lg:px-12">
@@ -49,7 +57,7 @@ export default function Home() {
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
           <a
-            href="#upload"
+            href="/sign-up"
             className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-7 text-sm font-semibold text-white shadow-[0_12px_32px_rgba(194,65,12,0.32)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
           >
             get started

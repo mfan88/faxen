@@ -1,3 +1,5 @@
+import { cn } from "@/lib/utils";
+
 const FOX_HEAD =
   "M6.3 10.7 9 3.4 12 9.1 15 3.4 17.7 10.7 20.4 13.5 17.4 20.2 12 21.4 6.6 20.2 3.6 13.5Z";
 const FOX_EARS = "M9.4 8.5 10.3 5.8M13.7 5.8 14.6 8.5";
@@ -47,10 +49,27 @@ function FoxLines({ color }: Readonly<{ color: string }>) {
 
 export function FoxLockup({ className }: Readonly<{ className?: string }>) {
   return (
-    <span
-      className={`flex h-9 w-9 items-center justify-center rounded-xl bg-accent text-white shadow-[0_8px_24px_rgba(194,65,12,0.28)] dark:text-black ${className ?? ""}`}
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 32 32"
+      fill="none"
+      className={cn("h-9 w-9", className)}
+      aria-hidden
     >
-      <FoxMark className="h-6 w-6" />
-    </span>
+      <rect width="32" height="32" rx="8" fill="#c2410c" />
+      <g
+        transform="translate(4 4)"
+        stroke="#111111"
+        strokeWidth="1.55"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M6.3 10.7 9 3.4 12 9.1 15 3.4 17.7 10.7 20.4 13.5 17.4 20.2 12 21.4 6.6 20.2 3.6 13.5Z" />
+        <path d="M9.4 8.5 10.3 5.8M13.7 5.8 14.6 8.5" />
+        <circle cx="10.2" cy="13.35" r="0.7" fill="#111111" stroke="none" />
+        <circle cx="13.8" cy="13.35" r="0.7" fill="#111111" stroke="none" />
+        <path d="M10.45 16.15 12 18.2l1.55-2.05" />
+      </g>
+    </svg>
   );
 }

@@ -1,9 +1,16 @@
+"use client";
+
+import { useSettings } from "@/providers/settings-provider";
+
 export function ThemeToggle() {
+  const { settings } = useSettings();
+
   return (
     <button
       type="button"
       data-theme-toggle=""
       aria-label="Toggle color theme"
+      aria-pressed={settings.isDarkMode}
       className="relative inline-flex h-10 w-[4.25rem] shrink-0 cursor-pointer items-center rounded-full border border-stone-900/10 bg-white/60 p-1 shadow-[0_8px_30px_rgba(28,25,23,0.06)] select-none dark:border-white/10 dark:bg-stone-950/50 dark:shadow-[0_8px_30px_rgba(0,0,0,0.35)]"
     >
       <span className="pointer-events-none absolute top-1 left-1 h-8 w-8 rounded-full bg-white shadow-sm transition-transform duration-300 ease-out dark:translate-x-[1.7rem] dark:bg-stone-900" />
