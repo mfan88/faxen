@@ -57,10 +57,10 @@ export default async function Home() {
 
         <div className="mt-9 flex flex-col items-center gap-3 sm:flex-row">
           <a
-            href="/sign-up"
+            href="/"
             className="inline-flex h-12 items-center justify-center rounded-full bg-accent px-7 text-sm font-semibold text-white shadow-[0_12px_32px_rgba(194,65,12,0.32)] transition-transform hover:scale-[1.02] active:scale-[0.98]"
           >
-            get started
+            coming soon
           </a>
           <a
             href="#how"
